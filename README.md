@@ -43,3 +43,6 @@ A real-time computer vision system that monitors a driver's eye state using a we
 - Install dependencies:
   ```bash
   pip install opencv-python dlib flask scipy playsound
+Created by DEVESH D
+Email: devesh090905@gmail.com
+
