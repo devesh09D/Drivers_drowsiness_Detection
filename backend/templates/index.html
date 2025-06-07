@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Driver Drowsiness Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset & base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: #222;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+        }
+        header h1 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+        main {
+            flex-grow: 1;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background: #fff;
+            padding: 1.8rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #111;
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 0.4rem;
+            width: fit-content;
+        }
+        #overview p {
+            font-size: 1rem;
+            color: #555;
+        }
+        #demo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #demo button {
+            background-color: #0d6efd;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.7rem 1.5rem;
+            margin: 0.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        #demo button:hover {
+            background-color: #0b5ed7;
+        }
+        #video-feed {
+            margin-top: 1.5rem;
+            width: 100%;
+            max-width: 640px;
+            height: 480px;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgb(0 0 0 / 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        footer p {
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            main {
+                margin: 1rem;
+            }
+            #video-feed {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Driver Drowsiness Detection</h1>
+    </header>
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>
+                This system uses computer vision to monitor a driver's eyes and detect drowsiness. If the driver is detected to be drowsy, an alert is triggered.
+            </p>
+        </section>
+        <section id="demo">
+            <h2>Live Detection</h2>
+            <div>
+                <button id="start-btn">Start Detection</button>
+                <button id="stop-btn">Stop Detection</button>
+            </div>
+            <div id="video-feed">
+                <p>Video feed will be displayed here...</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Your Name</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
