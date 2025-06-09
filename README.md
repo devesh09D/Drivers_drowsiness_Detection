@@ -1,6 +1,6 @@
 # Driver Drowsiness Detection System 🚗😴
 
-A real-time computer vision system that monitors a driver's eye state using a webcam and detects signs of drowsiness to prevent accidents by triggering an alert.
+A real-time computer vision system that monitors a driver's eye state using a cam and detects signs of drowsiness to prevent accidents by triggering an alert.
 
 ---
 
